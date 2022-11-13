@@ -1,0 +1,10 @@
+LocalAdd	local-nvim.txt	/*LocalAdd*
+LocalClean	local-nvim.txt	/*LocalClean*
+LocalSource	local-nvim.txt	/*LocalSource*
+local-nvim-api	local-nvim.txt	/*local-nvim-api*
+local-nvim-commands	local-nvim.txt	/*local-nvim-commands*
+local-nvim-contents	local-nvim.txt	/*local-nvim-contents*
+local-nvim-introduction	local-nvim.txt	/*local-nvim-introduction*
+local-nvim-setup	local-nvim.txt	/*local-nvim-setup*
+local-nvim.txt	local-nvim.txt	/*local-nvim.txt*
+local_nvim.sourced_file	local-nvim.txt	/*local_nvim.sourced_file*

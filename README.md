@@ -54,10 +54,11 @@ For example:
 require("lualine").setup({
     sections = {
         lualine_x = { function()
-            local sf = local_nvim.sourced_file
+            local sf = require("local_nvim").sourced_file
             if sf then
                 return "[" .. sf .. "]"
             end
+            return ""
         end, "filetype" },
     }
 })

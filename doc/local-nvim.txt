@@ -1,0 +1,58 @@
+*local-nvim.txt*                   A plugin for pre-verified per-project local
+                                                           configuration files
+
+==============================================================================
+CONTENTS                                                 *local-nvim-contents*
+
+    1. Introduction ......................... |local-nvim-introduction|
+    2. Setup ................................ |local-nvim-setup|
+    3. Commands ............................. |local-nvim-commands|
+    4. API .................................. |local-nvim-api|
+
+==============================================================================
+1. INTRODUCTION                                      *local-nvim-introduction*
+
+local_nvim is a secure alternative to the deprecated 'exrc' feature.
+It stores hashes of your local configuration files and only sources them if
+they have not beem tampered with.
+
+==============================================================================
+2. SETUP                                                    *local-nvim-setup*
+
+If you need to configure the plugin, make sure to call the setup function with
+the proper configuration on your `init` file. (Default values are shown here.)
+>
+
+    require("local_nvim").setup({
+        command = "md5sum", -- executable to use for computing files hashes
+        filenames = { "nvim.lua", ".nvim.lua", ".nvimrc", ".vimrc", ".exrc" }, -- looked for filenames (order matters)
+        autoload = true, -- automatically find and source file with configured filenames on VimEnter
+        verbose = false, -- add some debug messages
+    })
+
+==============================================================================
+3. COMMANDS                                              *local-nvim-commands*
+
+:LocalAdd <file>                                                    *LocalAdd*
+
+Add or update a configuration file. It will compute and store its hash and
+source it.
+
+:LocalSource                                                     *LocalSource*
+
+Find and source a local configuration file.
+(Or you can use the autoload feature which is enabled by default.)
+
+:LocalClean                                                       *LocalClean*
+
+Remove all previously added hashes.
+
+==============================================================================
+4. API                                                        *local-nvim-api*
+
+local_nvim.sourced_file                              *local_nvim.sourced_file*
+        Name of the found and sourced file, or `nil`.
+        Can be used for integration into your statusline.
+
+==============================================================================
+vim:tw=78:ts=8:ft=help:norl:noet:fen:noet:
