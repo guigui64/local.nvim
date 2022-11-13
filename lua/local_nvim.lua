@@ -75,6 +75,7 @@ end
 
 function local_nvim.clean()
     root:rmdir()
+    print("Cleaned!")
 end
 
 function local_nvim.setup(opts)
