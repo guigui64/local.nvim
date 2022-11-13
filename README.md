@@ -1,6 +1,6 @@
 # local.nvim
 
-Neovim plugin for per-project local configuration files
+Neovim plugin for secure local configuration files
 
 ## Why?
 
