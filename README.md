@@ -30,14 +30,15 @@ The folowing commands are available:
 
 ### Configuration
 
-To configure `local.nvim`, you san use the `setup()` method. The default values are shown below.
-You can skip the whole `setup` call if you are happy with all the defaults.
+To configure `local.nvim`, you can use the `setup()` method. The default values are shown below.
+You can skip the whole `setup` call if you are happy with the defaults.
 
 ```lua
 require("local_nvim").setup({
     command = "md5sum", -- executable to use for computing files hashes
-    filenames = { "nvim.lua", ".nvim.lua", ".nvimrc", ".vimrc", ".exrc" }, -- allowed filenames (order matters)
+    filenames = { "nvim.lua", ".nvim.lua", ".nvimrc", ".vimrc", ".exrc" }, -- looked for filenames (order matters)
     autoload = true, -- automatically find and source file with configured filenames on VimEnter
+    verbose = false, -- add some debug messages
 })
 ```
 
